@@ -15,7 +15,7 @@
           $veureTaula = "SELECT * FROM users";
           $consulta= $db->query($veureTaula);
           $idUsuari= $consulta->rowCount();
-          $idUsuari = $idUsuari++;
+          $idUsuari = $idUsuari+1;
           // echo $rowid;
           $fecha = date('y-m-d h:i:s');
           $sqlInserts = " INSERT INTO users 

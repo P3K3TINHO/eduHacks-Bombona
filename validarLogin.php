@@ -1,6 +1,6 @@
 <?php
     require_once('./index.php');
-    $sql = "SELECT * FROM users WHERE username='$usuario'  or mail='$usuario' and active = 1";
+    $sql = "SELECT * FROM users WHERE (username='$usuario'  or mail='$usuario') and active = 1";
                 $consulta = $db->query($sql);
                 if($consulta->rowCount()>0){
                     foreach ($consulta as $fila) {
